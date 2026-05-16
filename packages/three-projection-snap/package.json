@@ -6,12 +6,39 @@
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
   "files": [
     "dist",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsuzufu/three-projection-snap.git",
+    "directory": "packages/three-projection-snap"
+  },
+  "bugs": {
+    "url": "https://github.com/tsuzufu/three-projection-snap/issues"
+  },
+  "homepage": "https://github.com/tsuzufu/three-projection-snap#readme",
+  "keywords": [
+    "three",
+    "threejs",
+    "webgl",
+    "shader",
+    "vertex",
+    "projection",
+    "snapping"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm test",
     "test": "npm run build && node --test test/*.test.mjs"
   },
   "peerDependencies": {
