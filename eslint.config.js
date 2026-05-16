@@ -6,7 +6,7 @@ export default tseslint.config(
     ignores: [
       '**/dist/**',
       '**/node_modules/**',
-      'examples/vite-demo/public/**',
+      'examples/public/**',
       'package-lock.json',
     ],
   },
@@ -20,7 +20,7 @@ export default tseslint.config(
     },
   },
   {
-    files: ['examples/vite-demo/src/**/*.ts'],
+    files: ['examples/src/**/*.ts'],
     languageOptions: {
       globals: {
         document: 'readonly',

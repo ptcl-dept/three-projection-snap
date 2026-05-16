@@ -5,11 +5,11 @@
   "type": "module",
   "workspaces": [
     "packages/three-projection-snap",
-    "examples/vite-demo"
+    "examples"
   ],
   "scripts": {
     "build": "npm run build -w packages/three-projection-snap",
-    "dev": "npm run dev -w examples/vite-demo",
+    "dev": "npm run dev -w examples",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "lint": "eslint .",

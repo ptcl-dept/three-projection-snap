@@ -145,7 +145,7 @@ npm run dev
 Or run it directly from the demo workspace:
 
 ```bash
-cd examples/vite-demo
+cd examples
 npm install
 npm run dev
 ```

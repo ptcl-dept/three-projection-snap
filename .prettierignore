@@ -1,4 +1,4 @@
 dist
 node_modules
-examples/vite-demo/public
+examples/public
 package-lock.json
