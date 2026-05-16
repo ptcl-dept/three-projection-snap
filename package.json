@@ -1,0 +1,26 @@
+{
+  "name": "three-projection-snap-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/three-projection-snap",
+    "examples/vite-demo"
+  ],
+  "scripts": {
+    "build": "npm run build -w packages/three-projection-snap",
+    "dev": "npm run dev -w examples/vite-demo",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "npm run test -w packages/three-projection-snap"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.4.0",
+    "prettier": "^3.8.3",
+    "typescript": "^5.4.0",
+    "typescript-eslint": "^8.59.3"
+  }
+}

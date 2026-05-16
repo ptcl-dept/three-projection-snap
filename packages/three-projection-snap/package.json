@@ -1,0 +1,24 @@
+{
+  "name": "three-projection-snap",
+  "version": "0.1.0",
+  "description": "Screen-space vertex snapping for Three.js materials.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/*.test.mjs"
+  },
+  "peerDependencies": {
+    "three": ">=0.160.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.160.0",
+    "three": "^0.160.0"
+  }
+}

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>three-projection-snap demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;650&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+      <div class="viewport-label viewport-label--left">
+        <strong>Normal projection</strong>
+      </div>
+      <div class="viewport-label viewport-label--right">
+        <strong>Snapped projection</strong>
+      </div>
+      <a
+        class="github-link"
+        href="https://github.com/tsuzufu/three-projection-snap"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Open three-projection-snap on GitHub"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            fill="currentColor"
+            d="M12 2C6.48 2 2 6.59 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.09.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.51.47-3.16-.63-3.36-1.2-.11-.29-.6-1.2-1.03-1.45-.35-.2-.85-.69-.01-.7.79-.01 1.35.74 1.54 1.05.9 1.55 2.34 1.11 2.91.85.09-.67.35-1.11.64-1.37-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.26 9.26 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.06.36.32.68.93.68 1.89 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.17 10.17 0 0 0 22 12.25C22 6.59 17.52 2 12 2Z"
+          />
+        </svg>
+      </a>
+      <div class="split-divider" aria-hidden="true"></div>
+      <aside class="model-license" aria-label="Model license">
+        <span>Model: Low poly fox by PixelMannen (Animated)</span>
+        <span>
+          by
+          <a
+            href="https://sketchfab.com/tomkranis"
+            target="_blank"
+            rel="noreferrer"
+            >tomkranis</a
+          >
+          ·
+          <a
+            href="http://creativecommons.org/licenses/by/4.0/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            CC-BY-4.0
+          </a>
+        </span>
+      </aside>
+      <aside class="panel">
+        <div class="panel__section panel__header">
+          <h1>Projection Snap</h1>
+          <p>Screen-space projection quantization monitor.</p>
+        </div>
+
+        <div class="panel__section values" id="values"></div>
+
+        <form class="controls" id="controls">
+          <label class="control">
+            <span>Virtual resolution X</span>
+            <input
+              id="resolutionX"
+              type="number"
+              min="8"
+              step="1"
+              value="160"
+            />
+          </label>
+
+          <label class="control">
+            <span>Virtual resolution Y</span>
+            <input
+              id="resolutionY"
+              type="number"
+              min="8"
+              step="1"
+              value="120"
+            />
+          </label>
+
+          <label class="control">
+            <span>Strength</span>
+            <input
+              id="strength"
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value="1"
+            />
+          </label>
+
+          <label class="control">
+            <span>Mode</span>
+            <select id="mode">
+              <option value="floor">floor</option>
+              <option value="round" selected>round</option>
+              <option value="ceil">ceil</option>
+            </select>
+          </label>
+
+          <label class="control control--checkbox">
+            <input id="animateObject" type="checkbox" checked />
+            <span>Animate object</span>
+          </label>
+
+          <label class="control control--checkbox">
+            <input id="animateCamera" type="checkbox" />
+            <span>Animate camera</span>
+          </label>
+
+          <label class="control control--checkbox">
+            <input id="wireframe" type="checkbox" />
+            <span>Show wireframe</span>
+          </label>
+        </form>
+      </aside>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
