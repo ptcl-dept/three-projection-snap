@@ -25,6 +25,9 @@ Thumbs.db
 *.log
 npm-debug.log*
 
+# Local npm cache
+.npm-cache/
+
 # Environment
 .env
 .env.local
