@@ -7,7 +7,7 @@ import {
   type ProjectionSnapMode,
 } from 'three-projection-snap'
 
-const MODEL_URL = '/low_poly_fox_by_pixelmannen_animated/scene.gltf'
+const MODEL_URL = `${import.meta.env.BASE_URL}low_poly_fox_by_pixelmannen_animated/scene.gltf`
 const MODEL_TARGET_HEIGHT = 1.35
 const MODEL_FLOOR_CLEARANCE = 0.8
 
