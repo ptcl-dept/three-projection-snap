@@ -97,7 +97,6 @@ body {
   top: 18px;
   z-index: 3;
   display: grid;
-  min-width: 168px;
   padding: 7px 10px;
   border-radius: 0;
   background: var(--panel);
