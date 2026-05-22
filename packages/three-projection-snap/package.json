@@ -19,13 +19,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tsuzufu/three-projection-snap.git",
+    "url": "git+https://github.com/ptcl-dept/three-projection-snap.git",
     "directory": "packages/three-projection-snap"
   },
   "bugs": {
-    "url": "https://github.com/tsuzufu/three-projection-snap/issues"
+    "url": "https://github.com/ptcl-dept/three-projection-snap/issues"
   },
-  "homepage": "https://github.com/tsuzufu/three-projection-snap#readme",
+  "homepage": "https://github.com/ptcl-dept/three-projection-snap#readme",
   "keywords": [
     "three",
     "threejs",
