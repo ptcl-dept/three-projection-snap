@@ -1,6 +1,6 @@
 {
   "name": "three-projection-snap",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Screen-space vertex snapping for Three.js materials.",
   "type": "module",
   "main": "./dist/index.js",
